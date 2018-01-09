@@ -1,0 +1,69 @@
+﻿@model IEnumerable<COMP2084FinalF2017.Models.Country>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+@*<p>
+    @Html.ActionLink("Create New", "Create")
+</p>*@
+<table class="table">
+    <tr>
+        <th>
+            <p>Country</p>
+            @*@Html.DisplayNameFor(model => model.Country1)*@
+        </th>
+        <th>
+            <p>G</p>
+            @*@Html.DisplayNameFor(model => model.Gold)*@
+        </th>
+        <th>
+            <p>S</p>
+            @*@Html.DisplayNameFor(model => model.Silver)*@
+        </th>
+        <th>
+            <p>B</p>
+            @*@Html.DisplayNameFor(model => model.Bronze)*@
+        </th>
+        <th>
+            <p>Total Medals</p>
+            @*@Html.DisplayNameFor(model => model.TotalMedals)*@
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Flag)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Country1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Gold)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Silver)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Bronze)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TotalMedals)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Flag)
+        </td>
+        @*<td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.CountryID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.CountryID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.CountryID })
+        </td>*@
+    </tr>
+}
+
+</table>
